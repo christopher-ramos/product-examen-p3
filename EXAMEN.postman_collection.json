@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "922dac67-ab4b-44f2-914c-bcac935c5efb",
+		"name": "EXAMEN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23147792"
+	},
+	"item": [
+		{
+			"name": "PRODUCT",
+			"item": [
+				{
+					"name": "LISTAR TASAS DE INTERES",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9005/api/v1/interestrates"
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR TASAS DE INTERES Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9005/api/v1/interestrates"
+					},
+					"response": []
+				},
+				{
+					"name": "OBTENER PRODUCT ACCOUNT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9005/api/v1/productsaccounts/1"
+					},
+					"response": []
+				},
+				{
+					"name": "CREAR TASA DE INTERES",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"INTEREST RATE 1\",\r\n    \"interestRate\": 0.0,\r\n    \"state\": \"ACT\",\r\n    \"start\": \"2023-08-25T00:00:00Z\",\r\n    \"end\": \"2023-12-31T00:00:00Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9005/api/v1/interestrates"
+					},
+					"response": []
+				},
+				{
+					"name": "CREAR PRODUCT ACCOUNT",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Product Account 1\",\r\n    \"description\": \"Descripcion pa 1\",\r\n    \"minimunBalance\": 300.33,\r\n    \"payInterest\": \"N\",\r\n    \"acceptsChecks\": \"Y\",\r\n    \"state\": \"ACT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9005/api/v1/productsaccounts"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
